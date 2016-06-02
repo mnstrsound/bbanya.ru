@@ -12,6 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.2.4"
+    "jquery": "^2.2.4",
+    "lightbox2": "lightbox#^2.8.2"
   }
 }
