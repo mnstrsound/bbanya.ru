@@ -20,6 +20,22 @@ $(document).ready(function () {
         if ($(this).val() != '') $(this).css({backgroundColor: '#fff'});
     });
 
+    $('.catalog__diff span').click(function() {
+        var $el = $(this);
+        if ($el.parent().hasClass('active')) {
+            $el.parent().removeClass('active');
+            $el.text('Нажмите для просмотра комплектации:');
+        } else {
+            $el.parent().addClass('active');
+            $el.text('Нажмите для скрытия комплектации:');
+        }
+    });
+
+    $('.feedbacks__more').click(function() {
+        var $el = $(this);
+        $el.addClass('active').hide();
+    });
+
     $modalOverlay = $('.modal-overlay');
     $modalWindow = $('.modal-window');
     $openModal = $('.open-modal');
@@ -47,7 +63,30 @@ $(document).ready(function () {
     $modalOverlay.click(function () {
         closeModal();
     });
+
+    $('.faq__item-quest').click(function () {
+        $(this).toggleClass('active');
+    });
+
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+                center: [55.849974276815686,37.67301599999998],
+                zoom: 16
+            }),
+            myPlacemark = new ymaps.Placemark([55.849974276815686,37.67001599999998], {
+                // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+                balloonContentHeader: "Наш адрес: ",
+                balloonContentBody: "г. Москва, ул. Енисейская дом 1, строение 1",
+                balloonContentFooter: "тел: 8-495-654-54-55",
+            });
+        myMap.geoObjects
+            .add(myPlacemark);
+    }
 });
+
+
 
 var $modalOverlay;
 var $modalWindow;

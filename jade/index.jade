@@ -3,8 +3,792 @@ html
     head
         link(rel='stylesheet', href='css/libs.css')
         link(rel='stylesheet', href='css/build.css')
-        script(src='js/libs.js')
-        script(src='js/build.js')
+        link(rel="shortcut icon" href="favicon.png" type="image/png")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(charset="utf-8")
+        title.
+            Бани-бочки под ключ
     body
+        .fixed-header
+            .container
+                .fixed-header__title
+                    |Скачайте полный прайс лист прямо сейчас!
+        .main
+            .container
+                .main__top
+                    .main__desc
+                        .main__desc-logo
+                        .main__desc-about
+                            p
+                                |Баня-бочка24
+                            p
+                                |Производство и продажа
+                                br
+                                |бань-бочек по всей России
+                    .main__contacts
+                        -var tel = '8-495-652-90-54'
+                        a.main__contacts-tel(href="tel: #{tel}")
+                            |#{tel}
+                        br
+                        a.main__contacts-modal.open-modal(href="")
+                            |Заказать звонок
+                        p.main__contacts-work-time
+                            |с 9:00 до 20:00 без выходных
+                .main__title
+                    |Баня-бочка от 79900 р.
+                    br
+                    |от производителя за 1 день
+                    br
+                    |по финской технологии
+                a.open-modal.main__button.button(href="")
+                    |Узнать подробности
+        .compare.block
+            .container
+                .block__title
+                    |Сравнение Бани-бочки
+                    br
+                    |с русской баней
+                table.compare__table
+                    tr
+                        th
+                        th
+                            |русская баня
+                        th
+                            |баня-бочка
+                    tr
+                        td
+                            |1. доступность (от 79 900 р.)
+                        td
+                            span.compare__decline
+                        td
+                            span.compare__accept
+                    tr
+                        td
+                            |2. прогрев до 60&deg; за 30 мин.
+                        td
+                            span.compare__decline
+                        td
+                            span.compare__accept
+                    tr
+                        td
+                            |3. вместимость до 6 человек
+                        td
+                            span.compare__accept
+                        td
+                            span.compare__accept
+                    tr
+                        td
+                            |4. подготовка фундамента
+                        td
+                            span.compare__decline
+                        td
+                            span.compare__accept
+                    tr
+                        td
+                            |5. долговечность
+                        td
+                            span.compare__decline
+                        td
+                            span.compare__accept
+        .advise
+            .container
+                form.advise__form
+                    .advise__form-title
+                        |Получите 7 советов
+                        br
+                        |по выбору идеальной
+                        br
+                        |бани-бочки
+                    fieldset.advise__form-fieldset
+                        input(name="name" placeholder="Введите ваше имя" class="input input--name")
+                        input(name="email" placeholder="Введите ваш e-mail" class="input input--email")
+                        input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                    input(type="submit" class="submit button" value="Получить 7 советов")
+                    p.advise__form-desc
+                        |через несколько минут к вам на почту придет письмо
+                        br
+                        | с советами
+        .catalog.block
+            .container
+                .block__title
+                    |Каталог Бань-бочек
+                table.catalog__table
+                    caption
+                        |модельный ряд "мини"
+                    tr
+                        th
+                        th
+                            |мини
+                        th
+                            |мини с козырьком
+                        th
+                            |мини с крыльцом
+                    tr
+                        td.catalog__table-img
+                            |Фото
+                        td.catalog__table-img
+                            a(href="img/item.jpg" data-lightbox="lightbox2")
+                                img(src="img/item.jpg")
+                        td.catalog__table-img
+                            a(href="img/item.jpg" data-lightbox="lightbox2")
+                                img(src="img/item.jpg")
+                        td.catalog__table-img
+                            a(href="img/item.jpg" data-lightbox="lightbox2")
+                                img(src="img/item.jpg")
+                    tr
+                        td
+                            |Общая длина
+                        td
+                            |200 см
+                        td
+                            |200 см
+                        td
+                            |200 см
+                    tr
+                        td
+                            |Длина парной
+                        td
+                            |200 см
+                        td
+                            |200 см
+                        td
+                            |200 см
+                    tr
+                        td
+                            |Диметр
+                        td
+                            |200 см
+                        td
+                            |200 см
+                        td
+                            |200 см
+                    tr
+                        td
+                            |Материал
+                        td
+                            |дуб
+                        td
+                            |дуб
+                        td
+                            |дуб
+                .catalog__diff
+                    span
+                        |Нажмите для просмотра комплектации:
+                table.catalog__table
+                    tr
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            |Печь
+                        td
+                            span.compare__decline
+                        td
+                            span.compare__accept
+                        td
+                            span.compare__accept
+                    tr
+                        td
+                            |Бак
+                        td
+                            span.compare__accept
+                        td
+                            span.compare__accept
+                        td
+                            span.compare__decline
+                table.catalog__table
+                    tr
+                        td
+                        td
+                        td
+                        td
+                    tr.padding
+                        td
+                            |Цена под ключ
+                        td
+                            small
+                                |99 900 р.
+                            b
+                                |79 900 р.
+                            a.button
+                                |Заказать
+                        td
+                            small
+                                | 99 900 р.
+                            b
+                                | 79 900 р.
+                            a.button
+                                | Заказать
+                        td
+                            small
+                                | 99 900 р.
+                            b
+                                | 79 900 р.
+                            a.button
+                                | Заказать
+                table.catalog__table
+                    caption
+                        | модельный ряд "мини"
+                    tr
+                        th
+                        th
+                            | мини
+                        th
+                            | мини с козырьком
+                        th
+                            | мини с крыльцом
+                    tr
+                        td
+                            | Фото
+                        td
+                            img(src="img/item.jpg")
+                        td
+                            img(src="img/item.jpg")
+                        td
+                            img(src="img/item.jpg")
+                    tr
+                        td
+                            | Общая длина
+                        td
+                            | 200 см
+                        td
+                            | 200 см
+                        td
+                            | 200 см
+                    tr
+                        td
+                            | Длина парной
+                        td
+                            | 200 см
+                        td
+                            | 200 см
+                        td
+                            | 200 см
+                    tr
+                        td
+                            | Диметр
+                        td
+                            | 200 см
+                        td
+                            | 200 см
+                        td
+                            | 200 см
+                    tr
+                        td
+                            | Материал
+                        td
+                            | дуб
+                        td
+                            | дуб
+                        td
+                            | дуб
+                .catalog__diff
+                    span
+                        | Нажмите для просмотра комплектации:
+                table.catalog__table
+                    tr
+                        td
+                        td
+                        td
+                        td
+                    tr
+                        td
+                            | Печь
+                        td
+                            span.compare__decline
+                        td
+                            span.compare__accept
+                        td
+                            span.compare__accept
+                    tr
+                        td
+                            | Бак
+                        td
+                            span.compare__accept
+                        td
+                            span.compare__accept
+                        td
+                            span.compare__decline
+                table.catalog__table
+                    tr
+                        td
+                        td
+                        td
+                        td
+                    tr.padding
+                        td
+                            | Цена под ключ
+                        td
+                            small
+                                | 99 900 р.
+                            b
+                                | 79 900 р.
+                            a.button
+                                | Заказать
+                        td
+                            small
+                                | 99 900 р.
+                            b
+                                | 79 900 р.
+                            a.button
+                                | Заказать
+                        td
+                            small
+                                | 99 900 р.
+                            b
+                                | 79 900 р.
+                            a.button
+                                | Заказать
+        .help.block
+            .container
+                form.help__form
+                    .help__form-title
+                        |Поможем подобрать идеальную
+                        br
+                        |баню-бочку за 14 минут
+                    input(name="name" placeholder="Введите ваше имя" class="input input--name")
+                    input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                    input(type="submit" class="submit button" value="Получить консультацию")
+        .benefits.block
+            .container
+                .block__title
+                    |Преимущества бани-бочки
+                img(src="img/benefits.png")
+        .about.block
+            .container
+                .block__title
+                    |Мы производители
+                .block__desc
+                    |Посмотрите видео с нашего производства
+                .about__iframe
+                    iframe(src="https://www.youtube.com/embed/rtUntHROVCo" width="560" height="315" frameborder="0" allowfullscreen)
+        .feedbacks.block
+            .container
+                .block__title
+                    |Отзывы
+                .feedbacks__item
+                    .feedbacks__item-left
+                        iframe(src="https://www.youtube.com/embed/rtUntHROVCo" width="450" height="280" frameborder="0" allowfullscreen)
+                    .feedbacks__item-right
+                        p
+                            strong
+                                |Максим
+                        p
+                            b
+                                |Дата установки:
+                            span
+                                |15.05.2016
+                        p
+                            b
+                                |Срок установки:
+                            span
+                                |2 недели
+                        p
+                            b
+                                |Модель:
+                            span
+                                |Супер-люкс
+                        p
+                            b
+                                | Цена под ключ:
+                            span
+                                | 79 900 р.
+                        div
+                            |"Какой-то мега крутой отзыв."
+                .feedbacks__item
+                    .feedbacks__item-left
+                        iframe(src="https://www.youtube.com/embed/rtUntHROVCo" width="450" height="280" frameborder="0" allowfullscreen)
+                    .feedbacks__item-right
+                        p
+                            strong
+                                | Максим
+                        p
+                            b
+                                | Дата установки:
+                            span
+                                | 15.05.2016
+                        p
+                            b
+                                | Срок установки:
+                            span
+                                | 2 недели
+                        p
+                            b
+                                | Модель:
+                            span
+                                | Супер-люкс
+                        p
+                            b
+                                | Цена под ключ:
+                            span
+                                | 79 900 р.
+                        div
+                            | "Какой-то мега крутой отзыв."
+                .feedbacks__more.button
+                    |Посмотреть еще
+                .feedbacks__hidden
+                    .feedbacks__item
+                        .feedbacks__item-left
+                            iframe(src="https://www.youtube.com/embed/rtUntHROVCo" width="450" height="280" frameborder="0" allowfullscreen)
+                        .feedbacks__item-right
+                            p
+                                strong
+                                    | Максим
+                            p
+                                b
+                                    | Дата установки:
+                                span
+                                    | 15.05.2016
+                            p
+                                b
+                                    | Срок установки:
+                                span
+                                    | 2 недели
+                            p
+                                b
+                                    | Модель:
+                                span
+                                    | Супер-люкс
+                            p
+                                b
+                                    | Цена под ключ:
+                                span
+                                    | 79 900 р.
+                            div
+                                | "Какой-то мега крутой отзыв."
+                    .feedbacks__item
+                        .feedbacks__item-left
+                            iframe(src="https://www.youtube.com/embed/rtUntHROVCo" width="450" height="280" frameborder="0" allowfullscreen)
+                        .feedbacks__item-right
+                            p
+                                strong
+                                    | Максим
+                            p
+                                b
+                                    | Дата установки:
+                                span
+                                    | 15.05.2016
+                            p
+                                b
+                                    | Срок установки:
+                                span
+                                    | 2 недели
+                            p
+                                b
+                                    | Модель:
+                                span
+                                    | Супер-люкс
+                            p
+                                b
+                                    | Цена под ключ:
+                                span
+                                    | 79 900 р.
+                            div
+                                | "Какой-то мега крутой отзыв."
+        .official.block
+            .container
+                .block__title
+                    |Мы работаем официально
+                .official__images
+                    .official__image
+                        a(href="img/garanty.jpg" data-lightbox="lightbox")
+                            img(src="img/garanty.jpg")
+                    .official__image
+                        a(href="img/garanty.jpg" data-lightbox="lightbox")
+                            img(src="img/garanty.jpg")
+                    .official__image
+                        a(href="img/garanty.jpg" data-lightbox="lightbox")
+                            img(src="img/garanty.jpg")
+                    .official__image
+                        a(href="img/garanty.jpg" data-lightbox="lightbox")
+                            img(src="img/garanty.jpg")
+                    .official__image
+                        a(href="img/garanty.jpg" data-lightbox="lightbox")
+                            img(src="img/garanty.jpg")
+        .additional.block
+            .container
+                .block__title
+                    |Дополнительные аксессуары
+                .additional__row
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                |Название
+                        .additional__item-text
+                            |3000 р.
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                | Название
+                        .additional__item-text
+                            | 3000 р.
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                | Название
+                        .additional__item-text
+                            | 3000 р.
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                | Название
+                        .additional__item-text
+                            | 3000 р.
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                | Название
+                        .additional__item-text
+                            | 3000 р.
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                | Название
+                        .additional__item-text
+                            | 3000 р.
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                | Название
+                        .additional__item-text
+                            | 3000 р.
+                    .additional__item
+                        .additional__item-img
+                            img(src="img/add.jpg")
+                        .additional__item-desc
+                            span
+                                | Название
+                        .additional__item-text
+                            | 3000 р.d
+
+            .additional__line
+                form.additional__more
+                    .additional__more-title
+                        | Узнать подробно
+                        br
+                        | про аксессуары
+                    input(name="name" placeholder="Введите ваше имя" class="input input--name")
+                    input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                    input(type="submit" class="submit button" value="Узнать")
+        .scheme.block
+            .container
+                .block__title
+                    |Как мы работаем
+                .scheme__row.scheme__row--under
+                    .scheme__item
+                        .scheme__item-img
+                            img(src="img/err2.jpg")
+                        .scheme__item-text
+                            |Описание
+                            br
+                            a.open-modal(href="")
+                                |Оставить заявку
+                    .scheme__item
+                        .scheme__item-img
+                            img(src="img/err2.jpg")
+                        .scheme__item-text
+                            | Описание этапа
+                    .scheme__item
+                        .scheme__item-img
+                            img(src="img/err2.jpg")
+                        .scheme__item-text
+                            | Описание этапа
+                    .scheme__item
+                        .scheme__item-img
+                            img(src="img/err2.jpg")
+                        .scheme__item-text
+                            | Описание этапа
+                    .scheme__item
+                        .scheme__item-img
+                            img(src="img/err2.jpg")
+                        .scheme__item-text
+                            | Описание этапа
+                .scheme__row
+                    .scheme__desc
+                        |1-ый день
+                    .scheme__desc
+                        |1-ый день
+                    .scheme__desc
+                        |1-ый день
+                    .scheme__desc
+                        |1-ый день
+        .attention.block
+            .container
+                .attention__title
+                    p
+                        b
+                            |1 день доставка
+                        span
+                            |Lorem ipsum doler sir amet
+                    p
+                        b
+                            |14 дней произодство
+                        span
+                            |Lorem ipsum doler sir amet
+                    p
+                        b
+                            |365 дней гарантии
+                        span
+                            |Lorem ipsum doler sir amet
+        .error.block
+            .container
+                .block__title
+                    |Неправильная сборка
+                .error__row
+                    .error__item
+                        a(href="img/err1.jpg" data-lightbox="lightbox3")
+                            img(src="img/err1.jpg")
+                    .error__item
+                        a(href="img/err2.jpg" data-lightbox="lightbox3")
+                            img(src="img/err2.jpg")
+                    .error__item
+                        a(href="img/err3.jpg" data-lightbox="lightbox3")
+                            img(src="img/err3.jpg")
+                    .error__item
+                        a(href="img/err4.jpg" data-lightbox="lightbox3")
+                            img(src="img/err4.jpg")
+        .gallery.block
+            .container
+                .block__title
+                    |Посмотрите наши бани бочки
+            .gallery__row
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+                .gallery__item
+                    a(href="img/banya.jpg" data-lightbox="lightbox4")
+                        img(src="img/plug.png" class="gallery__item-plug")
+                        img(src="img/banya.jpg" class="gallery__item-img")
+        .faq.block
+            .container
+                .block__title
+                    |Ответы на вопросы
+                dl.faq__items
+                    dt.faq__item-quest
+                        |Какой-то вопрос
+                    dd.faq__item-answer
+                        |Какой-то ответ
+                    dt.faq__item-quest
+                        | Какой-то вопрос
+                    dd.faq__item-answer
+                        | Какой-то ответ
+                    dt.faq__item-quest
+                        | Какой-то вопрос
+                    dd.faq__item-answer
+                        | Какой-то ответ
+                    dt.faq__item-quest
+                        | Какой-то вопрос
+                    dd.faq__item-answer
+                        | Какой-то ответ
+                    dt.faq__item-quest
+                        | Какой-то вопрос
+                    dd.faq__item-answer
+                        | Какой-то ответ
+        .help.block
+            .container
+                form.help__form
+                    .help__form-title
+                        | Остались вопросы?
+                        br
+                        small
+                            | Ответим на ваши вопросы
+                    input(name="name" placeholder="Введите ваше имя" class="input input--name")
+                    input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                    input(type="submit" class="submit button" value="перезвоните мне")
+        .map.block
+            .container
+                .block__title
+                    |Запишитесь на просмотр бани-бочки
+                .block__desc
+                    |г. Москва, ул. Енисейская дом 1, строение 1
+                .map__form
+                    .map__form-title
+                        |Записаться
+                        br
+                        |на просмотр
+                    input(name="name" placeholder="Введите ваше имя" class="input input--name")
+                    input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                    input(type="submit" class="submit button" value="записаться")
+            #map
+        .footer
+            .container
+                .footer__info
+                    |ИП «Данилов Алексей Геральдович»
+                    br
+                    |Юр. адрес: 109316, Москва, Пятницкое шоссе, 6к3, 125464
+                    br
+                    |ИНН: 773386751060, ОГРНИП: 31477460870189
+                .footer__contacts
+                    |E-mail:
+                    a.footer__mail(href="mailto:info@mos-septik.ru")
+                        |info@mos-septik.ru
+                    br
+                    |Есть вопросы? Звоните!
+                    br
+                    a.footer__tel(href="tel:84951156747")
+                        |8 (495) 115-67-47
+                    br
+                    a.open-modal(href="")
+                        |Заказать звонок
+                    br
+                    |с 9:00 до 18:00 без выходных
+        script(src='js/libs.js')
+        script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        script(src='js/build.js')
