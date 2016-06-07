@@ -81,6 +81,7 @@ $(document).ready(function () {
                 balloonContentBody: "г. Москва, ул. Енисейская дом 1, строение 1",
                 balloonContentFooter: "тел: 8-495-654-54-55",
             });
+        myMap.behaviors.disable("scrollZoom");
         myMap.geoObjects
             .add(myPlacemark);
     }

@@ -30,7 +30,7 @@ html
                         a.main__contacts-tel(href="tel: #{tel}")
                             |#{tel}
                         br
-                        a.main__contacts-modal.open-modal(href="")
+                        a.main__contacts-modal.open-modal(href="#callback" data-theme="Заказать звонок")
                             |Заказать звонок
                         p.main__contacts-work-time
                             |с 9:00 до 20:00 без выходных
@@ -40,7 +40,7 @@ html
                     |от производителя за 1 день
                     br
                     |по финской технологии
-                a.open-modal.main__button.button(href="")
+                a.open-modal.main__button.button(href="#callback" data-theme="Узнать подробности")
                     |Узнать подробности
         .compare.block
             .container
@@ -92,7 +92,7 @@ html
                             span.compare__accept
         .advise
             .container
-                form.advise__form
+                form.advise__form(onsubmit="sendForm(this);")
                     .advise__form-title
                         |Получите 7 советов
                         br
@@ -100,6 +100,7 @@ html
                         br
                         |бани-бочки
                     fieldset.advise__form-fieldset
+                        input(type="hidden" value="Получить 7 советов")
                         input(name="name" placeholder="Введите ваше имя" class="input input--name")
                         input(name="email" placeholder="Введите ваш e-mail" class="input input--email")
                         input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
@@ -212,21 +213,21 @@ html
                                 |99 900 р.
                             b
                                 |79 900 р.
-                            a.button
+                            a.button.open-modal(href="#callback" data-theme="Заказать мини")
                                 |Заказать
                         td
                             small
                                 | 99 900 р.
                             b
                                 | 79 900 р.
-                            a.button
+                            a.button.open-modal(href="#callback" data-theme="Заказать мини")
                                 | Заказать
                         td
                             small
                                 | 99 900 р.
                             b
                                 | 79 900 р.
-                            a.button
+                            a.button.open-modal(href="#callback" data-theme="Заказать мини")
                                 | Заказать
                 table.catalog__table
                     caption
@@ -325,29 +326,30 @@ html
                                 | 99 900 р.
                             b
                                 | 79 900 р.
-                            a.button
+                            a.button.open-modal(href="#callback" data-theme="Заказать Мини")
                                 | Заказать
                         td
                             small
                                 | 99 900 р.
                             b
                                 | 79 900 р.
-                            a.button
+                            a.button.open-modal(href="#callback" data-theme="Заказать Мини")
                                 | Заказать
                         td
                             small
                                 | 99 900 р.
                             b
                                 | 79 900 р.
-                            a.button
+                            a.button.open-modal(href="#callback" data-theme="Заказать Мини")
                                 | Заказать
         .help.block
             .container
-                form.help__form
+                form.help__form(onsubmit="sendForm(this);")
                     .help__form-title
                         |Поможем подобрать идеальную
                         br
                         |баню-бочку за 14 минут
+                    input(type="hidden" value="Поможем подобрать")
                     input(name="name" placeholder="Введите ваше имя" class="input input--name")
                     input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
                     input(type="submit" class="submit button" value="Получить консультацию")
@@ -578,11 +580,12 @@ html
                             | 3000 р.d
 
             .additional__line
-                form.additional__more
+                form.additional__more(onsubmit="sendForm(this);")
                     .additional__more-title
                         | Узнать подробно
                         br
                         | про аксессуары
+                    input(type="hidden" value="Узнать про аксессуары")
                     input(name="name" placeholder="Введите ваше имя" class="input input--name")
                     input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
                     input(type="submit" class="submit button" value="Узнать")
@@ -597,7 +600,7 @@ html
                         .scheme__item-text
                             |Описание
                             br
-                            a.open-modal(href="")
+                            a.open-modal(href="#callback" data-theme="Оставить заявку")
                                 |Оставить заявку
                     .scheme__item
                         .scheme__item-img
@@ -743,12 +746,13 @@ html
                         | Какой-то ответ
         .help.block
             .container
-                form.help__form
+                form.help__form(onsubmit="sendForm(this);")
                     .help__form-title
                         | Остались вопросы?
                         br
                         small
                             | Ответим на ваши вопросы
+                    input(type="hidden" value="Ответим на вопросы")
                     input(name="name" placeholder="Введите ваше имя" class="input input--name")
                     input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
                     input(type="submit" class="submit button" value="перезвоните мне")
@@ -758,11 +762,12 @@ html
                     |Запишитесь на просмотр бани-бочки
                 .block__desc
                     |г. Москва, ул. Енисейская дом 1, строение 1
-                .map__form
+                form.map__form(onsubmit="sendForm(this);")
                     .map__form-title
                         |Записаться
                         br
                         |на просмотр
+                    input(type="hidden" value="Записаться на просмотр")
                     input(name="name" placeholder="Введите ваше имя" class="input input--name")
                     input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
                     input(type="submit" class="submit button" value="записаться")
@@ -785,10 +790,25 @@ html
                     a.footer__tel(href="tel:84951156747")
                         |8 (495) 115-67-47
                     br
-                    a.open-modal(href="")
+                    a.open-modal(href="#callback" data-theme="Заказать звонок")
                         |Заказать звонок
                     br
                     |с 9:00 до 18:00 без выходных
+        .modal-overlay
+        #callback.modal-window.modal-form(onsubmit="sendForm(this);")
+            .modal-close(onclick="closeModal();")
+            form.modal__form
+                .modal__form-title
+                    |Заказать звонок
+                input(name="theme" type="hidden" value="")
+                input(name="name" placeholder="Введите ваше имя" class="input input--name")
+                input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                input(type="submit" class="submit button" value="заказать")
+        #msg.modal-window.modal-thanx
+            h2
+                |Спасибо!
+            p
+                |Наши менеджеры скоро свяжутся с Вами
         script(src='js/libs.js')
         script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
         script(src='js/build.js')
