@@ -70,7 +70,12 @@ gulp.task('jade', function() {
         .pipe(livereload());
 });
 
-gulp.task('build', ['moveJSLibs', 'moveCSSLibs', 'moveImagesLibs', 'moveJS', 'moveImg','sass', 'jade']);
+gulp.task('moveFavicon', function () {
+   gulp.src('favicon.png')
+       .pipe(gulp.dest('build'));
+});
+
+gulp.task('build', ['moveFavicon', 'moveJSLibs', 'moveCSSLibs', 'moveImagesLibs', 'moveJS', 'moveImg','sass', 'jade']);
 
 gulp.task('watch', function () {
     livereload.listen();
