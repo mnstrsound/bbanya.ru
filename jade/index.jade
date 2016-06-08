@@ -350,7 +350,7 @@ html
                                 |89 900 р.
                             b
                                 |78 900 р.
-                            a.button.open-modal(href="#callback" data-theme="Заказать мини")
+                            a.button.open-modal(href="#callback" data-theme="Заказать мини1")
                                 |Заказать
                         td
                             small
@@ -477,7 +477,7 @@ html
                                 | 99 900 р.
                             b
                                 | 90 900 р.
-                            a.button.open-modal(href="#callback" data-theme="Заказать Мини")
+                            a.button.open-modal(href="#order-mini" data-theme="Заказать Мини")
                                 | Заказать
         .help.block
             .container
@@ -943,6 +943,9 @@ html
                 input(name="name" placeholder="Введите ваше имя" class="input input--name")
                 input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
                 p
+                    b
+                        |Удобное время для звонка
+                p
                     input(type="radio" name="time" value="9:00-12:00" id="time1")
                     label(for="time1")
                         |с 9:00 до 12:00
@@ -966,6 +969,40 @@ html
                 p
                     span
                         |Ваши данные не будут переданы 3-им лицам
+        #order-mini.modal-window.modal-form(onsubmit="sendForm(this);")
+            .modal-close(onclick="closeModal();")
+            form.modal__form
+                .modal__form-title
+                    | Закзаать мини
+                .modal__form-desc
+                    | Какой то т екст описания
+                input(name="theme" type="hidden" value="")
+                input(name="name" placeholder="Введите ваше имя" class="input input--name")
+                input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                p
+                    input(type="radio" name="time" value="9:00-12:00" id="time1-1")
+                    label(for="time1-1")
+                        | с 9:00 до 12:00
+                p
+                    input(type="radio" name="time" value="12:00-15:00" id="time1-2")
+                    label(for="time1-2")
+                        | с 12:00 до 15:00
+                p
+                    input(type="radio" name="time" value="15:00-18:00" id="time1-3")
+                    label(for="time1-3")
+                        | с 15:00 до 18:00
+                p
+                    input(type="radio" name="time" value="18:00-21:00" id="time1-4")
+                    label(for="time1-4")
+                        | с 18:00 до 21:00
+                p
+                    input(type="radio" name="time" value="Сейчас" id="time1-5")
+                    label(for="time1-5")
+                        | Сейчас (до 21:00)
+                input(type="submit" class="submit button" value="заказать")
+                p
+                    span
+                        | Ваши данные не будут переданы 3-им лицам
         #msg.modal-window.modal-thanx
             h2
                 |Спасибо, Ваша заявка принята.
