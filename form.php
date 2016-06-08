@@ -4,6 +4,7 @@
 		'email'    	 => 'E-mail',
 		'phone'      => 'Телефон',
 		'theme'      => 'Тема',
+		'time'       => 'Во сколько позвонить',
 	);
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$body = 'Сайт: Баня-бочка';
