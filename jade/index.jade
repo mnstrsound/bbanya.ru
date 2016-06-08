@@ -803,12 +803,36 @@ html
                 input(name="theme" type="hidden" value="")
                 input(name="name" placeholder="Введите ваше имя" class="input input--name")
                 input(name="phone" placeholder="Введите ваш телефон" class="input input--phone")
+                p
+                    input(type="radio" name="time" value="9:00-12:00" id="time1")
+                    label(for="time1")
+                        |с 9:00 до 12:00
+                p
+                    input(type="radio" name="time" value="12:00-15:00" id="time2")
+                    label(for="time2")
+                        | с 12:00 до 15:00
+                p
+                    input(type="radio" name="time" value="15:00-18:00" id="time3")
+                    label(for="time3")
+                        | с 15:00 до 18:00
+                p
+                    input(type="radio" name="time" value="18:00-21:00" id="time4")
+                    label(for="time4")
+                        | с 18:00 до 21:00
+                p
+                    input(type="radio" name="time" value="Сейчас" id="time5")
+                    label(for="time5")
+                        | Сейчас (до 21:00)
                 input(type="submit" class="submit button" value="заказать")
+                p
+                    span
+                        |Ваши данные не будут переданы 3-им лицам
         #msg.modal-window.modal-thanx
             h2
-                |Спасибо!
+                |Спасибо, Ваша заявка принята.
             p
-                |Наши менеджеры скоро свяжутся с Вами
+                |Мы свяжемся с Вами очень скоро
+            
         script(src='js/libs.js')
         script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
         script(src='js/build.js')

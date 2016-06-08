@@ -13,6 +13,7 @@
   ],
   "dependencies": {
     "jquery": "^2.2.4",
-    "lightbox2": "lightbox#^2.8.2"
+    "lightbox2": "lightbox#^2.8.2",
+    "jquery.maskedinput": "^1.4.1"
   }
 }
