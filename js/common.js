@@ -20,6 +20,8 @@ $(document).ready(function () {
         if ($(this).val() != '') $(this).css({backgroundColor: '#fff'});
     });
 
+    $('input[name="phone"]').mask("+7 (999) 999-9999");
+
     $('.catalog__diff span').click(function() {
         var $el = $(this);
         if ($el.parent().hasClass('active')) {

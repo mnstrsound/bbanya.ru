@@ -107,8 +107,11 @@ input {
     }
     &-modal {
       color: #fff;
-      text-decoration: none;
+      text-decoration: underline;
       font-size: 20px;
+      &:hover {
+        text-decoration: none;
+      }
     }
     &-work-time {
       font-size: 16px;
@@ -217,7 +220,7 @@ input {
       margin-bottom: 25px;
     }
     &-fieldset {
-      width: 780px;
+      width: 800px;
       margin: 0 auto 30px auto;
     }
     .submit {
@@ -857,45 +860,57 @@ input {
   &-thanx {
     width: 400px;
     padding: 25px;
-    background: rgba(0,0,0,.7);
+    background: #fff;
     h2 {
       line-height: 1.2em;
       font-size: 30px;
       margin-bottom: 20px;
-      color: #fff;
-      text-shadow: 1px 1px 1px #000;
+      color: #000;
       text-align: center;
     }
     p {
       line-height: 1.2em;
       font-size: 24px;
       margin-bottom: 20px;
-      color: #fff;
-      text-shadow: 1px 1px 1px #000;
+      color: #000;
       text-align: center;
     }
   }
   &__form {
     padding: 25px;
-    background: rgba(0,0,0,.7);
+    background: #fff;
     &-title {
       line-height: 1.2em;
       font-size: 30px;
-      margin-bottom: 20px;
-      color: #fff;
-      text-shadow: 1px 1px 1px #000;
+      color: #000;
       text-align: center;
+    }
+    p {
+      text-align: left;
+      label {
+        font-size: 14px;
+        cursor: pointer;
+      }
+      span {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+      }
     }
     .input {
       display: block;
       width: 250px;
-      margin: 0 auto 20px auto;
+      margin: 20px auto 0 auto;
+      &+p {
+        margin-top: 10px;
+      }
     }
     .submit {
       height: 40px;
       line-height: 40px;
       font-size: 16px;
       width: 250px;
+      margin: 10px auto 10px auto;
     }
   }
 }

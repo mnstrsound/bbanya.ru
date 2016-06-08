@@ -18,7 +18,8 @@ gulp.task('browser-sync', function() {
 gulp.task('moveJSLibs', function () {
     gulp.src([
             'bower_components/jquery/dist/jquery.min.js',
-            'bower_components/lightbox2/dist/js/lightbox.min.js'
+            'bower_components/lightbox2/dist/js/lightbox.min.js',
+            'bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js'
         ])
         .pipe(concat('libs.js'))
         .pipe(gulp.dest('build/js'));
