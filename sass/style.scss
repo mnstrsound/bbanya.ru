@@ -34,9 +34,9 @@ input {
   text-align: center;
   z-index: 10;
   &__title {
-    font-size: 25px;
-    height: 45px;
-    line-height: 45px;
+    font-size: 22px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 .button {
@@ -59,13 +59,13 @@ input {
   }
 }
 .main {
-  padding-bottom: 80px;
-  margin-top: 45px;
-  background: url('../img/main-img.jpg') center top no-repeat;
+  padding-bottom: 110px;
+  margin-top: 0px;
+  background: url('../img/main-img1.jpg') center top no-repeat;
   &__top {
     @include clearfix();
-    padding-top: 55px;
-    margin-bottom: 60px;
+    padding-top: 35px;
+    margin-bottom: 90px;
   }
   &__desc {
     float: left;
@@ -87,7 +87,7 @@ input {
       color: #fff;
       p {
         &:first-child {
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 500;
         }
       }
@@ -103,7 +103,7 @@ input {
     &-tel {
       color: #fff;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 23px;
     }
     &-modal {
       color: #fff;
@@ -373,7 +373,7 @@ input {
       margin-bottom: 20px;
       small {
         text-transform: none;
-        font-size: 22px;
+        font-size: 20px;
       }
     }
     .input {
@@ -521,7 +521,11 @@ input {
       font-size: 30px;
       margin-bottom: 30px;
       line-height: 1.2em;
-      font-weight: 500;
+      font-weight: 400;
+    small {
+        text-transform: none;
+        font-size: 20px;
+      }
     }
     .input {
       display: block;
