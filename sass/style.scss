@@ -223,6 +223,7 @@ input {
       width: 800px;
       margin: 0 auto 30px auto;
     }
+    .invalid {border: 1px solid #f00 !important;}
     .submit {
       display: block;
       width: 246px;
@@ -237,6 +238,7 @@ input {
       &:first-child {
         margin-left: 0;
       }
+
     }
     &-desc {
       text-align: center;
@@ -300,7 +302,7 @@ input {
           height: auto;
           a {
             height: auto;
-          }
+           }
         }
         vertical-align: middle;
         height: 45px;
@@ -311,7 +313,7 @@ input {
           max-width: 100%;
           display: block;
           width: 100%;
-        }
+          }
         small {
           display: block;
           margin-bottom: 5px;
@@ -489,7 +491,7 @@ input {
   }
   &__item {
     @include column();
-    @include column-width(1, 4);
+    @include column-width(1, 5);
     margin-bottom: 20px;
     &-img {
       position: relative;
@@ -616,7 +618,7 @@ input {
   padding-bottom: 25px;
   background: #f0f0f0;
   &__title {
-    margin-left: 60px;
+    margin-left: 30px;
     padding-left: 320px;
     background: url('../img/attention.png') 80px center no-repeat;
     background-size: auto 110%;
@@ -808,7 +810,7 @@ input {
   &__mail {
     text-decoration: none;
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
   }
   &__tel {
     text-decoration: none;
@@ -893,14 +895,14 @@ input {
     p {
       text-align: left;
       label {
-        font-size: 14px;
+        font-size: 16px;
         cursor: pointer;
       }
       b {
         display: block;
-        font-size: 15px;
-        padding: 10px 20px 10px 20px;
-        font-weight: 600;
+        font-size: 17px;
+        padding: 0px 0px 10px 0px;
+        font-weight: 400;
       }
       span {
         display: block;
