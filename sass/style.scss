@@ -505,13 +505,13 @@ input {
       margin-top: 15px;
       text-align: center;
       span {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
     &-text {
       text-align: center;
       padding: 10px 0;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 500;
     }
   }
@@ -869,7 +869,6 @@ input {
     padding: 25px;
     background: #fff;
     h2 {
-      line-height: 1.2em;
       font-size: 30px;
       margin-bottom: 20px;
       color: #000;
@@ -887,14 +886,13 @@ input {
     padding: 25px;
     background: #fff;
     &-title {
-      line-height: 1.2em;
-      font-size: 30px;
+      font-size: 25px;
       color: #000;
       text-align: center;
     }
     &-desc {
-      margin: 15px auto 0 auto;
-      font-size: 22px;
+      margin: 10px auto 0 auto;
+      font-size: 18px;
       text-align: center;
     }
     p {
