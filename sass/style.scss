@@ -381,6 +381,7 @@ input {
       width: 250px;
       margin: 0 auto 20px auto;
     }
+    .invalid {border: 1px solid #f00 !important;}
     .submit {
       display: block;
       width: 250px;
@@ -533,6 +534,7 @@ input {
       width: 250px;
       margin: 0 auto 20px auto;
     }
+    .invalid {border: 1px solid #f00 !important;}
     .submit {
       height: 40px;
       font-size: 20px;
@@ -785,6 +787,7 @@ input {
       width: 250px;
       margin: 0 auto 20px auto;
     }
+    .invalid {border: 1px solid #f00 !important;}
     .submit {
       height: 40px;
       line-height: 40px;
@@ -921,6 +924,7 @@ input {
         margin-top: 10px;
       }
     }
+    .invalid {border: 1px solid #f00 !important;}
     .submit {
       height: 40px;
       line-height: 40px;
