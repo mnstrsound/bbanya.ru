@@ -70,12 +70,12 @@ gulp.task('jade', function() {
         .pipe(livereload());
 });
 
-gulp.task('moveFavicon', function () {
-   gulp.src('favicon.png')
+gulp.task('moveFaviconAndForm', function () {
+   gulp.src(['favicon.png', 'form.php'])
        .pipe(gulp.dest('build'));
 });
 
-gulp.task('build', ['moveFavicon', 'moveJSLibs', 'moveCSSLibs', 'moveImagesLibs', 'moveJS', 'moveImg','sass', 'jade']);
+gulp.task('build', ['moveFaviconAndForm', 'moveJSLibs', 'moveCSSLibs', 'moveImagesLibs', 'moveJS', 'moveImg','sass', 'jade']);
 
 gulp.task('watch', function () {
     livereload.listen();

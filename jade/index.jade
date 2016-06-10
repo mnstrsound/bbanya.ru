@@ -95,7 +95,7 @@ html
                             span.compare__accept
         .advise
             .container
-                form.advise__form(onsubmit="sendForm(this);")
+                form.advise__form(onsubmit="sendForm(this); return false;" action="form.php")
                     .advise__form-title
                         |Получите 7 советов
                         br
@@ -1661,7 +1661,7 @@ html
                                 | Заказать
         .help.block
             .container
-                form.help__form(onsubmit="sendForm(this);")
+                form.help__form(onsubmit="sendForm(this); return false;" action="form.php")
                     .help__form-title
                         |Поможем подобрать идеальную
                         br
@@ -2007,7 +2007,7 @@ html
                             | 1700 р.
 
             .additional__line
-                form.additional__more(onsubmit="sendForm(this);")
+                form.additional__more(onsubmit="sendForm(this); return false;" action="form.php")
                     .additional__more-title
                         | Узнайте подробно про аксессуары
                         br
@@ -2152,7 +2152,7 @@ html
                         | В нашей компании имеются различные формы оплаты. В том числе, мы принимаем безналичные платежи и банковские карты.
         .help.block
             .container
-                form.help__form(onsubmit="sendForm(this);")
+                form.help__form(onsubmit="sendForm(this); return false;" action="form.php")
                     .help__form-title
                         | У вас остались вопросы?
                         br
@@ -2168,7 +2168,7 @@ html
                     |Запишитесь на просмотр бани-бочки
                 .block__desc
                     |г. Москва, ул. Енисейская, дом 1, строение 1 (м. Свиблово)
-                form.map__form(onsubmit="sendForm(this);")
+                form.map__form(onsubmit="sendForm(this); return false;" action="form.php")
                     .map__form-title
                         |Записаться
                         br
@@ -2201,7 +2201,7 @@ html
                     br
                     |с 9:00 до 22:00 без выходных
         .modal-overlay
-        #callback.modal-window.modal-form(onsubmit="sendForm(this);")
+        #callback.modal-window.modal-form(onsubmit="sendForm(this); return false;" action="form.php")
             .modal-close(onclick="closeModal();")
             form.modal__form
                 .modal__form-title
@@ -2238,7 +2238,7 @@ html
                 p
                     span
                         |Ваши данные не будут <br>переданы 3-им лицам
-        #order-mini.modal-window.modal-form(onsubmit="sendForm(this);")
+        #order-mini.modal-window.modal-form(onsubmit="sendForm(this); return false;" action="form.php")
             .modal-close(onclick="closeModal();")
             form.modal__form
                 .modal__form-title
