@@ -144,6 +144,10 @@ function sendForm(elem) {
                         var input = $(this);
                         input.val('').removeClass('invalid').removeAttr('style');
                     });
+                    if (form.hasClass('advise__form')) {
+                        var win = window.open('tor.torrent', '_blank');
+                        win.focus();
+                    }
                     closeModal();
                     openModal($('#msg'));
                     setTimeout(function () {
