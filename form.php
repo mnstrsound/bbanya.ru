@@ -20,7 +20,7 @@
 			$body .= "\n" . $fields[$key] . ': ' . $value;
 		}
 
-		$email_to = 'mnstrsound@gmail.com';
+		$email_to = 'mnstrsound@gmail.com, bochka-banya24@yandex.ru';
 		$headers = 'Content-type: text; charset=UTF-8' . "\r\n";
 		$headers .= 'From: bbanya.ru '. "\r\n" . '';
 		$subject = $theme;
